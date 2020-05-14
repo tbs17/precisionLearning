@@ -1,6 +1,6 @@
 # Precision Learning Video Feature Extraction
 + **Executive Summary**
-  + **The precision learning project is a collaborative effort among Penn State, University of Arkansas and Worcester Polytechnic Institute to deliver data-driven personalization solutions for math students using Internet-of-Videos. Penn State is tasked to extract video data and features for a causal awareness model to recommend personalized instructional videos**
+  + **The precision learning project is a collaborative effort among Penn State, University of Arkansas and Worcester Polytechnic Institute to deliver data-driven personalization solutions for math students using Internet-of-Videos. Penn State is tasked to extract video data and features for a causal awareness model to recommend personalized instructional videos**. The complete feature list can be viewed [here](https://docs.google.com/spreadsheets/d/15s320NfZuvPCBP2C8vm3HOuZnYAsJ-RErjmI8-0wgY0/edit#gid=0). Access will be granted when requested. 
     + Penn State has also built a prediting model to detect a video relevance to the skill code based on the extracted videos. Currently, the model has achieved the performance of 0.92 ROC-AUC. 
   + We targeted 185 videos based on the ASSISTment Grade 7 Math common core codes using youtube using API endpoints and have human annotaters verify them with binary labels 'Relevant' or 'Not Relevant'(ratio is 152:33 ). 
   + Based on video id or link, we extracted 14 meta features as below: 
