@@ -1,0 +1,1 @@
+qsub -I -X -A cyberlamp_class -l qos=cl_class -l nodes=1:ppn=4:gpus=1:shared -lmem=8gb -l walltime=8:00:00
