@@ -5,12 +5,12 @@
   + We targeted 185 videos based on the ASSISTments Grade 7 Math common core codes using youtube using API endpoints and have human annotaters verify them with binary labels 'Relevant' or 'Not Relevant'(ratio is 152:33 ). 
   + Based on video id or link, we extracted 14 meta features as below: 
     + 'Video id','cc_skill_code', 'code_desc', 'video_link', 'published_at', 'video_title','video_desc','channel_title','transcript',   'Views', 'Likes', 'Dislikes', 'Favorites', 'Comments'
-   + Based on the transcript we extracted, we extracted 72 liguistic inquiry and word count features (LIWC) using the software [LIWC](https://liwcsoftware.onfastspring.com/). Please refer the detailed features and meanings to its website [LIWC dictionary ](http://liwc.wpengine.com/compare-dictionaries/).
+   + Based on the transcript we extracted, we extracted 72 Liguistic Inquiry and Word Count features (LIWC) using the software [LIWC](https://liwcsoftware.onfastspring.com/). Please refer the detailed features and meanings to its website [LIWC dictionary ](http://liwc.wpengine.com/compare-dictionaries/).
   + Based on video id or link, we use Azure Face detection API to extract 44 visual features. They are below:
     + 'Profile faces','Front faces', 'blondVal','brownVal','redVal','blackVal','grayVal','otherVal','Smile','Headpose - Pitch',
         'Headpose - Roll','Headpose - Yaw','Gender','Age','Facialhair - Moustache','Facialhair - Beard','Facialhair - Sideburns','Glasses',
         'Emotion - Anger','Emotion - Contempt','Emotion - Disgust','Emotion - Fear','Emotion - Happiness','Emotion - Neutral','Emotion - Sadness','Emotion - Surprise','Blur - Blurlevel','Blur - Value','Exposure - Exposurelevel','Exposure - Value','Occlusion - Foreheadoccluded', 'Occlusion - Eyeoccluded', 'Occlusion - Mouthoccluded','Noise - Noiselevel','Noise - Value','Makeup - Eyemakeup','Makeup - Lipmakeup','Accessories - Type', 'Accessories - Confidence','Hair - Bald','Hair - Invisible','Front face','Side profile','Voice only'
-  + Based on video id or link, we used 'pydub','librosa', 'speechRecognition' audio-specific packages to extract 4 5 audio features. They are 'median_flatness','count of number of 1s/total windows', 'pitch_tuning','wpm','Number of speakers'.
+  + Based on video id or link, we used 'pydub','librosa', 'speechRecognition' audio-specific packages to extract 5 audio features. They are 'median_flatness','count of number of 1s/total windows', 'pitch_tuning','wpm','Number of speakers'.
   + Based on video links, we downloaded all the 185 videos via package 'pytube3' and extracted frames per 30 seconds using 'csv2' package. Using Amazon Rekognition APIs, we detected the below top 20 objects from the frames of each video.
     + 'Text','Plot','Number','Symbol','Page','Word','Person','Diagram','Human','White Board','Document','Paper', 'Handwriting', 'Plan', 'Face','Driving License','Electronics','Flyer','Measurements','Alphabet'
   + We also created 25 derived features to better feature engineering for the detection model:
@@ -27,4 +27,4 @@
     + the '185_row' folder contains files that shares the 'Video id' key
     + 'video_objects.csv' needs to be joined after mergining all the files from '185_row' with key 'Video title'
     
-  + the 'all_features_cleaned.csv' file is the final with all the features merged before training for models
+  + the 'all_features_cleaned.csv' file is the final file with all the features merged before training for models
